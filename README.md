@@ -1,3 +1,3 @@
 # Akira
 
-Agent for Karma 🏔️
+Agent for Karma 🥝
