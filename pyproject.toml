@@ -1,7 +1,15 @@
 [project]
 name = "akira"
-version = "0.0.1"
+version = "0.1.0"
 description = "Agent for Karma 🥝"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "akira_agent"
+]
+
+[tool.uv.sources]
+akira_agent = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/akira_agent"]

@@ -1,7 +1,24 @@
 version = 1
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "akira",
+    "akira-agent",
+]
+
 [[package]]
 name = "akira"
-version = "0.0.1"
+version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "akira-agent" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "akira-agent", editable = "packages/akira_agent" }]
+
+[[package]]
+name = "akira-agent"
+version = "0.1.0"
+source = { editable = "packages/akira_agent" }
